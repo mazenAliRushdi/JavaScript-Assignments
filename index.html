@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+      /*
+        This Code won't work because it tries to change the color of the heading (<h1>) before the browser has read the heading itself and built it into the page.
+      */
+      // Code One
+      document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+      /*
+        This code will work because it waits for the page to fully load.
+      */
+      // Code Two
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <script>
+      /*
+        This code will work because it is placed after the title definition in the HTML file.
+      */
+      // Code Three
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
 </html>
