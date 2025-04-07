@@ -9,5 +9,3 @@ imageContainers.forEach((container) => {
     imgElement.alt = logoAlt;
   }
 });
-
-// Commit message: Set src and alt attributes for all images within div elements.
