@@ -1,14 +1,11 @@
-const firstDiv = document.querySelector(".one");
-const secondDiv = document.querySelector(".two");
+const allImages = document.querySelectorAll("img");
+const oldText = "Old";
+const newText = "Elzero New";
 
-const firstContent = firstDiv.textContent;
-const firstTitle = firstDiv.title;
-
-const secondContent = secondDiv.textContent;
-const secondTitle = secondDiv.title;
-
-firstDiv.textContent = secondContent;
-firstDiv.title = secondTitle;
-
-secondDiv.textContent = firstContent;
-secondDiv.title = firstTitle + "Two";
+for (let i = 0; i < allImages.length; i++) {
+  if (allImages[i].hasAttribute("alt")) {
+    allImages[i].alt = oldText;
+  } else {
+    allImages[i].alt = newText;
+  }
+}
